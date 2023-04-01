@@ -19,6 +19,7 @@ def check_hashes(password,hashed_text):
 		return hashed_text
 	return False
 
+
 # connection à la database
 conn = sqlite3.connect(database_path)
 
