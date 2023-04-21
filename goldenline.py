@@ -12,7 +12,7 @@ def page_admin():
     st.write('****')
     task = st.selectbox("Que voulez vous faire ?",["Voir la liste des utilisateurs","Ajouter un utilisateur"])
     if task == "Ajouter un utilisateur":
-        st.subheader(":pencil2: Ajouter un nouvel utilisateur")
+        st.subheader(":pencil2: Ajouter un nouvel utilisateur :pencil2:")
         new_user = st.text_input("username")
         new_password = st.text_input("password",type='password')
         if st.button("Ajouter"):
@@ -48,7 +48,7 @@ def page_user():
     b=st.number_input('Combien de lignes de la table souhaitez vous exporter ?', 0, 1000, 10)
     export=query.df_export(b)
     export
-    
+
     st.download_button(
         label="télécharger les données en csv",
         data=export.to_csv().encode('utf-8'),
